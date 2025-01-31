@@ -1,19 +1,19 @@
 [
   {
     "id": 0,
-    "name": "Guest 1",
+    "name": "Mr. Manav Pande",
     "description": "A regular visitor. Loves technology and gadgets.",
     "images": ["assets/images/guest1_1.jpg", "assets/images/guest1_2.jpg"]
   },
   {
     "id": 1,
-    "name": "Guest 2",
+    "name": "Elon Musk",
     "description": "Has a keen interest in photography and nature.",
     "images": ["assets/images/guest2_1.jpg", "assets/images/guest2_2.jpg"]
   },
   {
     "id": 2,
-    "name": "Guest 3",
+    "name": "RDJ aka Tony Stark ",
     "description": "An art enthusiast with a passion for painting.",
     "images": ["assets/images/guest3_1.jpg", "assets/images/guest3_2.jpg"]
   }
