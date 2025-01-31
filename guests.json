@@ -1,21 +1,20 @@
 [
-    {
-      "id": 0,
-      "name": "Guest 1",
-      "description": "A regular visitor. Loves technology and gadgets.",
-      "image": "assets/images/guest1.jpg"
-    },
-    {
-      "id": 1,
-      "name": "Guest 2",
-      "description": "Has a keen interest in photography and nature.",
-      "image": "assets/images/guest2.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Guest 3",
-      "description": "An art enthusiast with a passion for painting.",
-      "image": "assets/images/guest3.jpg"
-    }
-  ]
-  
+  {
+    "id": 0,
+    "name": "Guest 1",
+    "description": "A regular visitor. Loves technology and gadgets.",
+    "images": ["assets/images/guest1_1.jpg", "assets/images/guest1_2.jpg"]
+  },
+  {
+    "id": 1,
+    "name": "Guest 2",
+    "description": "Has a keen interest in photography and nature.",
+    "images": ["assets/images/guest2_1.jpg", "assets/images/guest2_2.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Guest 3",
+    "description": "An art enthusiast with a passion for painting.",
+    "images": ["assets/images/guest3_1.jpg", "assets/images/guest3_2.jpg"]
+  }
+]
