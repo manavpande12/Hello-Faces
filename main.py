@@ -10,8 +10,10 @@ speech_queue = queue.Queue()
 spoken_names = {}
 last_spoken_guest = None  # Track the last guest spoken
 last_spoken_time = 0  # Track the last spoken time globally
+is_speaking = False  # Flag to track if the speech is ongoing
 
 def speak_worker():
+    global is_speaking
     engine = pyttsx3.init('sapi5')
     Id = r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_DAVID_11.0'
     engine.setProperty('voice', Id)
@@ -19,8 +21,10 @@ def speak_worker():
         text = speech_queue.get()
         if text is None:
             break
+        is_speaking = True  # Set speaking flag to True
         engine.say(text)
         engine.runAndWait()
+        is_speaking = False  # Set speaking flag to False once done
         speech_queue.task_done()
 
 def speak(text):
@@ -81,10 +85,11 @@ while True:
 
                 # Reset cooldown if a new guest is detected
                 if name != last_spoken_guest or (current_time - last_spoken_time) > 120:
-                    speak(f"Name: {name}")
-                    speak(f"Description: {description}")
-                    last_spoken_guest = name
-                    last_spoken_time = current_time
+                    if not is_speaking:  # Wait for speech to finish before speaking again
+                        speak(f"Name: {name}")
+                        speak(f"Description: {description}")
+                        last_spoken_guest = name
+                        last_spoken_time = current_time
 
             # Draw a rectangle around the face
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
