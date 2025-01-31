@@ -80,7 +80,7 @@ while True:
                 description = guest_info['description'] if guest_info else "No description available"
 
                 # Reset cooldown if a new guest is detected
-                if name != last_spoken_guest or (current_time - last_spoken_time) > 180:
+                if name != last_spoken_guest or (current_time - last_spoken_time) > 120:
                     speak(f"Name: {name}")
                     speak(f"Description: {description}")
                     last_spoken_guest = name
