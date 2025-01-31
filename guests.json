@@ -1,0 +1,21 @@
+[
+    {
+      "id": 0,
+      "name": "Guest 1",
+      "description": "A regular visitor. Loves technology and gadgets.",
+      "image": "assets/images/guest1.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Guest 2",
+      "description": "Has a keen interest in photography and nature.",
+      "image": "assets/images/guest2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Guest 3",
+      "description": "An art enthusiast with a passion for painting.",
+      "image": "assets/images/guest3.jpg"
+    }
+  ]
+  
